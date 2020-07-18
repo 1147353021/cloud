@@ -8,3 +8,7 @@ spring:
             - Path=/hello/{segment}
           filters:
             - RewritePath=/hello(?<segment>/?.*), $\{segment}
+        - id: feign_route
+          uri: http://localhost:8082
+          predicates:
+            - Path=/feign/{segment}
