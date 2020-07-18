@@ -18,14 +18,8 @@
     <modules>
         <module>nacos</module>
         <module>consumer</module>
+        <module>getway</module>
     </modules>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-    </dependencies>
 
     <dependencyManagement>
         <dependencies>
