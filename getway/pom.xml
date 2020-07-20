@@ -6,7 +6,7 @@
         <groupId>com.alibaba</groupId>
         <artifactId>cloud</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <!-- lookup parent from repository -->
     </parent>
     <artifactId>getway</artifactId>
     <version>0.0.1-SNAPSHOT</version>
