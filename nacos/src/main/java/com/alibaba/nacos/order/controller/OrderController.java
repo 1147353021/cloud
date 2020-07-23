@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.math.BigDecimal;
+import java.util.concurrent.*;
 
 /**
  * <p>
@@ -31,6 +32,7 @@ public class OrderController {
 
     @PostMapping("/create")
     public String createOrder(BigDecimal money,Integer id){
+        ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(5, 10, 1000, TimeUnit.MICROSECONDS, new LinkedBlockingDeque<>(100), Executors.defaultThreadFactory(), new ThreadPoolExecutor.AbortPolicy());
 
         Iorder order = new Iorder();
         order.setCost(money);
